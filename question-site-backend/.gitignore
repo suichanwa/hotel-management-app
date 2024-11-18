@@ -1,0 +1,11 @@
+# Ignore system files
+*.log
+*.tmp
+*.swp
+Thumbs.db
+
+# Ignore directories
+/node_modules/
+/build/
+/dist/
+/venv/
