@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hotel_deep_blue">#113A5C</color>
+    <color name="hotel_mid_blue">#1C5D8C</color>
+    <color name="hotel_gold">#C99A2E</color>
+    <color name="hotel_gold_dark">#9A741F</color>
+    <color name="hotel_white">#FFFFFF</color>
+    <color name="hotel_surface">#F4F7FA</color>
+    <color name="hotel_surface_alt">#E8EEF4</color>
+    <color name="hotel_text_primary">#102235</color>
+    <color name="hotel_text_secondary">#5E7286</color>
+    <color name="hotel_success">#2E7D32</color>
+    <color name="black">#000000</color>
+</resources>

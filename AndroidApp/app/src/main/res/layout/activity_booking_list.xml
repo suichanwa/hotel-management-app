@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hotel_surface"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hotel_deep_blue"
+        android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar"
+        android:title="@string/booking_list_title"
+        android:titleTextColor="@color/hotel_white" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerBookings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="@dimen/spacing_md" />
+
+        <TextView
+            android:id="@+id/textEmptyBookings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/no_bookings"
+            android:textColor="@color/hotel_text_secondary"
+            android:textSize="@dimen/body_text"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>
