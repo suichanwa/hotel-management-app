@@ -31,3 +31,6 @@ captures/
 
 # Signing
 signing.properties
+
+.gradle-local
+.android-local
