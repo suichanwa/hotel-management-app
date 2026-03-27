@@ -37,7 +37,7 @@ public class BookingsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         bookingRepository = new BookingRepository(requireContext());
-        bookingAdapter = new BookingAdapter(requireActivity(), false, null);
+        bookingAdapter = new BookingAdapter(requireActivity(), false, null, null);
         binding.recyclerBookingsPreview.setLayoutManager(new LinearLayoutManager(requireContext()));
         binding.recyclerBookingsPreview.setAdapter(bookingAdapter);
         binding.buttonManageBookings.setOnClickListener(v ->

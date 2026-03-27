@@ -18,6 +18,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingViewHolder> {
+    public interface OnBookingClickListener {
+        void onBookingClick(Booking booking);
+    }
+
     public interface OnBookingLongClickListener {
         void onBookingLongClick(Booking booking, View anchorView);
     }
@@ -25,12 +29,15 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingV
     private final List<Booking> bookings = new ArrayList<>();
     private final Activity hostActivity;
     private final boolean enableContextMenu;
+    private final OnBookingClickListener clickListener;
     private final OnBookingLongClickListener longClickListener;
 
     public BookingAdapter(Activity hostActivity, boolean enableContextMenu,
+                          OnBookingClickListener clickListener,
                           OnBookingLongClickListener longClickListener) {
         this.hostActivity = hostActivity;
         this.enableContextMenu = enableContextMenu;
+        this.clickListener = clickListener;
         this.longClickListener = longClickListener;
     }
 
@@ -78,6 +85,9 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingV
                 R.string.booking_total,
                 booking.getTotalPrice()
         ));
+        holder.itemView.setOnClickListener(clickListener == null
+                ? null
+                : v -> clickListener.onBookingClick(booking));
 
         if (enableContextMenu) {
             holder.itemView.setOnLongClickListener(v -> {
@@ -106,8 +116,9 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingV
 
         @Override
         public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-            menu.add(0, R.id.context_action_edit, 0, R.string.context_edit);
-            menu.add(0, R.id.context_action_delete, 1, R.string.context_delete);
+            menu.add(0, R.id.context_action_view, 0, R.string.context_view);
+            menu.add(0, R.id.context_action_edit, 1, R.string.context_edit);
+            menu.add(0, R.id.context_action_delete, 2, R.string.context_delete);
         }
     }
 }

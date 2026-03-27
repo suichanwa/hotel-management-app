@@ -31,6 +31,7 @@
     <string name="guests_count">Guests: %1$d</string>
     <string name="price_summary">Total price: $%1$.2f</string>
     <string name="save_booking">Save Booking</string>
+    <string name="create_booking">Create Booking</string>
     <string name="booking_saved">Booking saved for %1$s</string>
     <string name="booking_saved_snackbar">%1$s booked successfully. Total: $%2$.2f</string>
     <string name="booking_list_title">All Bookings</string>
@@ -42,10 +43,13 @@
     <string name="booking_no_breakfast">Breakfast not included</string>
     <string name="booking_guests">%1$d guests</string>
     <string name="booking_total">$%1$.2f</string>
+    <string name="context_view">View</string>
     <string name="context_edit">Edit</string>
     <string name="context_delete">Delete</string>
+    <string name="booking_details_title">Booking Details</string>
     <string name="delete_booking_title">Delete booking</string>
     <string name="delete_booking_message">Do you want to delete this booking for %1$s?</string>
+    <string name="dialog_close">Close</string>
     <string name="dialog_cancel">Cancel</string>
     <string name="dialog_delete">Delete</string>
     <string name="dialog_save">Save</string>
@@ -64,4 +68,11 @@
     <string name="check_out_value">Check-out: %1$s</string>
     <string name="price_details">Price preview updates automatically based on dates, guests, and breakfast.</string>
     <string name="room_card_description">%1$s, %2$s</string>
+    <string name="booking_guest_label">Guest: %1$s</string>
+    <string name="booking_room_label">Room: %1$s</string>
+    <string name="booking_dates_label">Dates: %1$s to %2$s</string>
+    <string name="booking_guests_label">Guests: %1$d</string>
+    <string name="booking_breakfast_label">Breakfast: %1$s</string>
+    <string name="booking_total_label">Total: $%1$.2f</string>
+    <string name="add_booking_content_description">Create a new booking</string>
 </resources>
